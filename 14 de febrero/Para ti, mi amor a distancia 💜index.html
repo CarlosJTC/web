@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Ti 💜❤️</title>
+    <style>
+        body {
+            background: url("img\ 3.jpg") no-repeat center center fixed;
+            background-size: cover;
+            color: rgb(255, 4, 171);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .message-box {
+            background: rgb(180, 136, 136);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 400px;
+        }
+        .flower {
+            display: none;
+            font-size: 50px;
+            margin-top: 20px;
+        }
+        button {
+            background: rgb(35, 136, 131);
+            color: #089aee;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .love-letter {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 600px;
+            text-align: left;
+        }
+        .pompompurin-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .pompompurin {
+            width: 150px;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .pompompurin:hover {
+            transform: scale(1.1);
+        }
+        .pompompurin-text {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>💜 Para alguien especial ❤️</h1>
+    <div class="love-letter">
+        <p>Mi amor,</p>
+        <p>Hoy es un día especial, no solo porque es San Valentín, sino porque tengo la oportunidad de recordarte lo mucho que significas para mí. Aunque la distancia nos separe físicamente, quiero que sepas que mi corazón siempre está contigo. Cada día que pasa, mi amor por ti crece más y más, porque eres una persona increíble, con una luz única que ilumina mi vida.</p>
+        <p>Desde el primer momento en que empezamos a hablar, supe que había algo especial en ti. Tu forma de ser, tu inteligencia, tu ternura y la manera en que me haces sentir han hecho que cada instante a tu lado sea valioso. Eres mi compañera en esta aventura, mi apoyo cuando necesito fuerzas y mi razón para sonreír incluso en los días difíciles.</p>
+        <p>Sé que la distancia no es fácil, pero también sé que lo nuestro es fuerte y vale cada momento de espera. Sueño con el día en que podamos estar juntos sin contar los kilómetros que nos separan, con abrazarte sin prisas y con compartir no solo palabras, sino también momentos inolvidables a tu lado.</p>
+        <p>Cada día más confirmo que te quiero a mi lado, te amo y quiero que seas mi futura novia, esposa, madre de mis hijos, compañera de aventuras y, si la vida nos lo permite, que nos entierren juntos. Porque sé que lo nuestro es algo único y especial, algo que trasciende el tiempo y la distancia.</p>
+        <p>Gracias por ser como eres, por hacerme sentir amado, por cada risa, por cada mensaje, por cada detalle que nos une a pesar de la distancia. Te prometo que haré todo lo posible para que nuestra historia siga creciendo y para demostrarte día a día lo importante que eres para mí.</p>
+        <p>Feliz Día de San Valentín, mi amor. Espero que pronto podamos celebrar juntos, sin pantallas de por medio, solo tú y yo, disfrutando de nuestra compañía.</p>
+        <p>Te amo con todo mi corazón 🥺</p>
+    </div>
+    <div class="message-box" id="message">Haz clic para ver un mensaje</div>
+    <button onclick="showMessage()">Mostrar mensaje</button>
+    <div class="flower" id="flower">🌸</div>
+    <button onclick="showFlower()">Una sorpresa para ti</button>
+    
+    <div style="margin-top: 20px;">;
+        <p>🎶 Escucha nuestra canción especial: <a href="https://www.youtube.com/watch?v=aKNkY7N5Zr8" target="_blank" style="color: rgb(228, 160, 13); text-decoration: underline;">Kilómetros - Sin Bandera</a></p>
+        <p>Te la dedico, siempre que la escucho pienso en ti 💖</p>
+    </div>
+    
+    <div class="pompompurin-container">
+        <img src="img 1.png" class="pompompurin" id="pompompurin" onclick="pompompurinJump()" alt="Pompompurin">
+        <p class="pompompurin-text">Te amo  💗</p>
+        <img src="img 2.jpeg"
+        <p class="pompompurin-text">Sé mi San Valentin siempre 💗</p>
+    </div>
+    
+    <script>
+        const messages = [
+            "Eres increíble 💖",
+            "Cada día me gustas más 💕",
+            "Aunque estemos lejos, siempre te pienso 🌎",
+            "Eres mi persona favorita ❤️"
+        ];
+        
+        function showMessage() {
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            document.getElementById("message").innerText = randomMessage;
+        }
+        
+        function showFlower() {
+            document.getElementById("flower").style.display = "block";
+        }
+        
+        function pompompurinJump() {
+            let pompompurin = document.getElementById("pompompurin");
+            pompompurin.style.transform = "translateY(-20px)";
+            setTimeout(() => {
+                pompompurin.style.transform = "translateY(0)";
+            }, 300);
+        }
+    </script>
+</body>
+</html>
